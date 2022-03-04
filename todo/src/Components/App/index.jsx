@@ -22,7 +22,7 @@ function App() {
       <h1>To Do List </h1>
       <Input addToList={addToList} />
       <ToDo list={list}></ToDo>
-      <Button onClick={clearList}> Delete</Button>
+      <Button onClick={clearList}> Reset</Button>
     </main>
   );
 }
