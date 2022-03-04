@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button";
 import Input from "../Input";
 // import Button from "../Button";
 import { ToDo } from "../ToDo";
@@ -11,11 +12,17 @@ function App() {
     setList([...list, { name: newItem }]);
   }
 
+  // delete/reset the entire list
+  function clearList() {
+    setList([]);
+  }
+
   return (
     <main>
       <h1>To Do List </h1>
       <Input addToList={addToList} />
       <ToDo list={list}></ToDo>
+      <Button onClick={clearList}> Delete</Button>
     </main>
   );
 }

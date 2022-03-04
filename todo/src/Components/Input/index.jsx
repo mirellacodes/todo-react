@@ -35,7 +35,7 @@ export default function Input({ addToList }) {
         value={text}
         onKeyDown={handleKeyDown}
       />
-      <Button onClick={handleClick}></Button>
+      <Button onClick={handleClick}> Add </Button>
     </main>
   );
 }
