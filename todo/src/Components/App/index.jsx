@@ -20,7 +20,6 @@ function App() {
   // delete each
   function handleRemove(index) {
     setList([...list].splice(1, index));
-
     console.log("hello");
   }
 

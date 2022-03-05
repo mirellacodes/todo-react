@@ -1,7 +1,7 @@
 import React from "react";
 import { ToDoList } from "../ToDoList";
 
-export function ToDo({ list, handleRemove }) {
+export function ToDo({ list, handleRemove, toggleCompleted }) {
   return (
     // iterate each list by using map function, so that everytime it maps, it will create a new li
     <ul>
@@ -10,6 +10,7 @@ export function ToDo({ list, handleRemove }) {
           name={item.name}
           key={index}
           handleRemove={() => handleRemove(index)}
+          toggleCompleted={() => toggleCompleted(index)}
         />
       ))}
     </ul>
