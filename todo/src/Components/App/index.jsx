@@ -17,11 +17,18 @@ function App() {
     setList([]);
   }
 
+  // delete each
+  function handleRemove(index) {
+    setList([...list].splice(1, index));
+
+    console.log("hello");
+  }
+
   return (
     <main>
       <h1>To Do List </h1>
       <Input addToList={addToList} />
-      <ToDo list={list}></ToDo>
+      <ToDo list={list} handleRemove={handleRemove}></ToDo>
       <Button onClick={clearList}> Reset</Button>
     </main>
   );
