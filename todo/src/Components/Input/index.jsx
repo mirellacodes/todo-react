@@ -16,7 +16,11 @@ export default function Input({ addToList }) {
 
   // when user clicks the button, it will add to the list
   function handleClick() {
-    addToList(text);
+    if (text === "") {
+      alert("please write something");
+    } else {
+      addToList(text);
+    }
   }
 
   // when user click "Enter" key, it will add to the list
@@ -25,6 +29,11 @@ export default function Input({ addToList }) {
       handleClick();
     }
   }
+
+  // if user enter nothing, alert
+  // if (text === ""){
+  //   alert("please write something")
+  //     }
 
   return (
     <main>
