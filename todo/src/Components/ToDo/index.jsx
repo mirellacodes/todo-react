@@ -10,6 +10,7 @@ export function ToDo({ list, handleRemove, toggleCompleted }) {
           name={item.name}
           key={index}
           handleRemove={() => handleRemove(index)}
+          isCompleted={item.isCompleted}
           toggleCompleted={() => toggleCompleted(index)}
         />
       ))}
